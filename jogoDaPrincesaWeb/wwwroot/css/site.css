@@ -1,0 +1,424 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-image: url(../imgs/princessGameWallpaper.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+
+.header {
+    background-color: #F5DEB3;
+}
+
+footer {
+    background-color: #F5DEB3;
+}
+
+.form-submit-button {
+    position: relative;
+    background: #F5DEB3;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000;
+    text-shadow: none;
+    width: 160px;
+    height: 60px;
+    top: 300px;
+    left: 500px;
+    transition: transform 0.2s;
+}
+
+    .form-submit-button:hover {
+        background: #F4A460;
+        color: #fff;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #000;
+        text-shadow: none;
+        transform: scale(1.2);
+    }
+
+.form-submit-button1 {
+    position: relative;
+    background: #F5DEB3;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000;
+    text-shadow: none;
+    width: 160px;
+    height: 60px;
+    top: 310px;
+    left: 500px;
+    transition: transform 0.2s;
+}
+
+    .form-submit-button1:hover {
+        background: #F4A460;
+        color: #fff;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #000;
+        text-shadow: none;
+        transform: scale(1.2);
+    }
+
+.form-submit-button2 {
+    position: relative;
+    background: #F5DEB3;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000;
+    text-shadow: none;
+    width: 300px;
+    height: 40px;
+    transition: transform 0.2s;
+}
+
+    .form-submit-button2:hover {
+        background: #F4A460;
+        color: #fff;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #000;
+        text-shadow: none;
+        transform: scale(1.2);
+    }
+
+.textoNarrador {
+    font-family: luminari, fantasy;
+    font-size: x-large;
+    font-weight: bold;
+    color: azure;
+    text-align: center;
+}
+
+.buttonCandidatoPergunta {
+    background-image: url(../imgs/candidata.png);
+    background-color: #F5DEB3;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000;
+    text-shadow: none;
+    width: 180px;
+    height: 180px;
+    transition: transform 0.2s;
+}
+
+    .buttonCandidatoPergunta:hover {
+        background-image: url(../imgs/candidata.png);
+        background-color: #F4A460;
+        color: #fff;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #000;
+        text-shadow: none;
+        transform: scale(1.1);
+    }
+
+.buttonCandidatoCasado {
+    background-image: url(../imgs/candidata.png);
+    background-color: #F5DEB3;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000;
+    text-shadow: none;
+    width: 300px;
+    height: 300px;
+    transition: transform 0.2s;
+}
+
+    .buttonCandidatoCasado:hover {
+        background-image: url(../imgs/candidata.png);
+        background-color: #F4A460;
+        color: #fff;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #000;
+        text-shadow: none;
+        transform: scale(1.1);
+    }
+
+.buttonCandidato1 {
+    background-image: url(../imgs/candidata.png);
+    background-color: #F5DEB3;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000;
+    text-shadow: none;
+    width: 220px;
+    height: 220px;
+    transition: transform 0.2s;
+}
+
+    .buttonCandidato1:hover {
+        background-image: url(../imgs/candidata.png);
+        background-color: #F4A460;
+        color: #fff;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #000;
+        text-shadow: none;
+        transform: scale(1.06);
+    }
+
+.buttonCandidato2 {
+    background-image: url(../imgs/candidata.png);
+    background-color: #F5DEB3;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000;
+    text-shadow: none;
+    width: 220px;
+    height: 220px;
+    transition: transform 0.2s;
+}
+
+    .buttonCandidato2:hover {
+        background-image: url(../imgs/candidata.png);
+        background-color: #F4A460;
+        color: #fff;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #000;
+        text-shadow: none;
+        transform: scale(1.06);
+    }
+
+.buttonCandidato3 {
+    background-image: url(../imgs/candidata.png);
+    background-color: #F5DEB3;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000;
+    text-shadow: none;
+    width: 220px;
+    height: 220px;
+    transition: transform 0.2s;
+}
+
+    .buttonCandidato3:hover {
+        background-image: url(../imgs/candidata.png);
+        background-color: #F4A460;
+        color: #fff;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #000;
+        text-shadow: none;
+        transform: scale(1.06);
+    }
+
+.buttonCandidato4 {
+    background-image: url(../imgs/candidata.png);
+    background-color: #F5DEB3;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000;
+    text-shadow: none;
+    width: 220px;
+    height: 220px;
+    transition: transform 0.2s;
+}
+
+    .buttonCandidato4:hover {
+        background-image: url(../imgs/candidata.png);
+        background-color: #F4A460;
+        color: #fff;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #000;
+        text-shadow: none;
+        transform: scale(1.06);
+    }
+
+.buttonCandidato5 {
+    background-image: url(../imgs/candidata.png);
+    background-color: #F5DEB3;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000;
+    text-shadow: none;
+    width: 220px;
+    height: 220px;
+    transition: transform 0.2s;
+}
+
+    .buttonCandidato5:hover {
+        background-image: url(../imgs/candidata.png);
+        background-color: #F4A460;
+        color: #fff;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #000;
+        text-shadow: none;
+        transform: scale(1.06);
+    }
+
+.buttonCandidato6 {
+    background-image: url(../imgs/candidata.png);
+    background-color: #F5DEB3;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000;
+    text-shadow: none;
+    width: 220px;
+    height: 220px;
+    transition: transform 0.2s;
+}
+
+    .buttonCandidato6:hover {
+        background-image: url(../imgs/candidata.png);
+        background-color: #F4A460;
+        color: #fff;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #000;
+        text-shadow: none;
+        transform: scale(1.06);
+    }
+
+.buttonCandidato7 {
+    background-image: url(../imgs/candidata.png);
+    background-color: #F5DEB3;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000;
+    text-shadow: none;
+    width: 220px;
+    height: 220px;
+    transition: transform 0.2s;
+}
+
+    .buttonCandidato7:hover {
+        background-image: url(../imgs/candidata.png);
+        background-color: #F4A460;
+        color: #fff;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #000;
+        text-shadow: none;
+        transform: scale(1.06);
+    }
+
+.divCandidatos {
+    display:none;
+}
+
+.divCandidatos1 {
+    display: none;
+    left: 165px;
+    position: relative;
+}
+
+.divCandidatosGeral {
+    position: relative;
+    top: 10px;
+}
+
+.perguntas {
+    display: none;
+}
+
+.textLabel {
+    font-family: luminari, fantasy;
+    font-size: x-large;
+    font-weight: bold;
+    color: azure;
+    /*-webkit-text-stroke-width: 0.6px;
+    -webkit-text-stroke-color: #000;*/
+    text-align: center;
+}
+
+.textLabel1 {
+    font-family: luminari, fantasy;
+    font-size: x-large;
+    font-weight: bold;
+    color: azure;
+    /*-webkit-text-stroke-width: 0.6px;
+    -webkit-text-stroke-color: #000;*/
+    text-align: center;
+}
+
+.textLabel2 {
+    font-family: luminari, fantasy;
+    font-size: x-large;
+    font-weight: bold;
+    color: #000;
+    /*-webkit-text-stroke-width: 0.6px;
+    -webkit-text-stroke-color: #000;*/
+    text-align: center;
+    left: 25px;
+    position: relative;
+}
+
+.textLabel3 {
+    font-family: luminari, fantasy;
+    font-size: x-large;
+    font-weight: bold;
+    color: azure;
+    /*-webkit-text-stroke-width: 0.6px;
+    -webkit-text-stroke-color: #000;*/
+    text-align: center;
+    left: 0px;
+    position: relative;
+}
+
+@font-face {
+    font-family: 'luminari';
+    src: url(../fonts/Luminari-Regular.ttf);
+    font-weight:normal;
+    font-style:normal;
+}
+
+.animationFadeIn {
+    animation: fadeIn 1s linear;
+}
+
+@keyframes fadeIn{
+    from {opacity:0}
+    to {opacity:1}
+}

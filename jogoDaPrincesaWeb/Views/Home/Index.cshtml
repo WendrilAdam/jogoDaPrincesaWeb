@@ -1,0 +1,3327 @@
+﻿@page
+@model DTOjogodaprincesa
+<div>
+    <div><audio id="musicPlayer" src="audios/musicTheme.mp3" preload="auto" loop></audio></div>
+    <div id="div1" class="text-center">
+        <h1 id="texto1" class="display-4 fw-bold" style="font-family: luminari, fantasy;">Bem vindo ao jogo da princesa</h1>
+        <div class="form-group row">
+            <div class="col-md-3">
+                <button id="initbutton" class="form-submit-button text-black fw-bold" runat="server" style="font-family: luminari, fantasy;">Jogar</button>
+                <button id="rulesbutton" class="form-submit-button1 text-black fw-bold" runat="server" style="font-family: luminari, fantasy;">Regras</button>
+            </div>
+        </div>
+    </div>
+    <div id="divAnimation">
+        <div id="div2" style="text-align:center;">
+            <label class="textoNarrador" id="lblnarrador"></label>
+        </div>
+        <div class="divCandidatosGeral">
+            <div id="divCandidatas" class="form-group row divCandidatos">
+                <div class="col-md-3" style="text-align:center">
+                    <button id="buttonCandidato1" class="buttonCandidato1"></button>
+                    <label id="labelcandidato1" class="textLabel">Candidata 1</label>
+                    <div id="perguntas1" class="perguntas">
+                        <button id="buttonCandidato1pergunta1" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Quem é você?</button>
+                        <button id="buttonCandidato1pergunta2" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Quem é ela?</button>
+                        <button id="buttonCandidato1pergunta3" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Onde está a princesa?</button>
+                    </div>
+                    <div class="col-md-24">
+                        <label id="labelcandidato1resposta1" class="textLabel1"></label>
+                        <label id="labelcandidato1resposta2" class="textLabel1"></label>
+                    </div>
+                </div>
+                <div class="col-md-3" style="text-align:center">
+                    <button id="buttonCandidato2" class="buttonCandidato2"></button>
+                    <label id="labelcandidato2" class="textLabel">Candidata 2</label>
+                    <div id="perguntas2" class="perguntas">
+                        <button id="buttonCandidato2pergunta1" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Quem é você?</button>
+                        <button id="buttonCandidato2pergunta2" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Quem é ela?</button>
+                        <button id="buttonCandidato2pergunta3" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Onde está a princesa?</button>
+                    </div>
+                    <div class="col-md-24">
+                        <label id="labelcandidato2resposta1" class="textLabel1"></label>
+                        <label id="labelcandidato2resposta2" class="textLabel1"></label>
+                    </div>
+                </div>
+                <div class="col-md-3" style="text-align:center">
+                    <button id="buttonCandidato3" class="buttonCandidato3"></button>
+                    <label id="labelcandidato3" class="textLabel">Candidata 3</label>
+                    <div id="perguntas3" class="perguntas">
+                        <button id="buttonCandidato3pergunta1" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Quem é você?</button>
+                        <button id="buttonCandidato3pergunta2" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Quem é ela?</button>
+                        <button id="buttonCandidato3pergunta3" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Onde está a princesa?</button>
+                    </div>
+                    <div class="col-md-24">
+                        <label id="labelcandidato3resposta1" class="textLabel1"></label>
+                        <label id="labelcandidato3resposta2" class="textLabel1"></label>
+                    </div>
+            
+                </div>
+                <div class="col-md-3" style="text-align:center">
+                    <button id="buttonCandidato4" class="buttonCandidato4"></button>
+                    <label id="labelcandidato4" class="textLabel">Candidata 4</label>
+                    <div id="perguntas4" class="perguntas">
+                        <button id="buttonCandidato4pergunta1" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Quem é você?</button>
+                        <button id="buttonCandidato4pergunta2" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Quem é ela?</button>
+                        <button id="buttonCandidato4pergunta3" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Onde está a princesa?</button>
+                    </div>
+                    <div class="col-md-24">
+                        <label id="labelcandidato4resposta1" class="textLabel1"></label>
+                        <label id="labelcandidato4resposta2" class="textLabel1"></label>
+                    </div>
+            
+                </div>
+            </div>
+
+            <div id="divCandidatas1" class="form-group row divCandidatos1">
+                <div class="col-md-3" style="text-align:center">
+                    <button id="buttonCandidato5" class="buttonCandidato5"></button>
+                    <label id="labelcandidato5" class="textLabel">Candidata 5</label>
+                    <div id="perguntas5" class="perguntas">
+                        <button id="buttonCandidato5pergunta1" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Quem é você?</button>
+                        <button id="buttonCandidato5pergunta2" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Quem é ela?</button>
+                        <button id="buttonCandidato5pergunta3" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Onde está a princesa?</button>
+                    </div>
+                    <div class="col-md-24">
+                        <label id="labelcandidato5resposta1" class="textLabel1"></label>
+                        <label id="labelcandidato5resposta2" class="textLabel1"></label>
+                    </div>
+            
+                </div>
+                <div class="col-md-3" style="text-align:center">
+                    <button id="buttonCandidato6" class="buttonCandidato6"></button>
+                    <label id="labelcandidato6" class="textLabel">Candidata 6</label>
+                    <div id="perguntas6" class="perguntas">
+                        <button id="buttonCandidato6pergunta1" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Quem é você?</button>
+                        <button id="buttonCandidato6pergunta2" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Quem é ela?</button>
+                        <button id="buttonCandidato6pergunta3" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Onde está a princesa?</button>
+                    </div>
+                    <div class="col-md-24">
+                        <label id="labelcandidato6resposta1" class="textLabel1"></label>
+                        <label id="labelcandidato6resposta2" class="textLabel1"></label>
+                    </div>
+                </div>
+                <div class="col-md-3" style="text-align:center">
+                    <button id="buttonCandidato7" class="buttonCandidato7"></button>
+                    <label id="labelcandidato7" class="textLabel">Candidata 7</label>
+                    <div id="perguntas7" class="perguntas">
+                        <button id="buttonCandidato7pergunta1" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Quem é você?</button>
+                        <button id="buttonCandidato7pergunta2" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Quem é ela?</button>
+                        <button id="buttonCandidato7pergunta3" class="form-submit-button2 text-black fw-bold" style="font-family: luminari, fantasy;">Onde está a princesa?</button>
+                    </div>
+                    <div class="col-md-24">
+                        <label id="labelcandidato7resposta1" class="textLabel1"></label>
+                        <label id="labelcandidato7resposta2" class="textLabel1"></label>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-pergunta2" style="width:75%;top:5%;left:15%;">
+        <div class="modal-dialog" style="overflow-x:hidden;overflow-y:auto;max-width:600px;">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#F4A460;border:none">
+                    <h5 id="modal-titulo" class="modal-title textLabel3">Quem é ela?</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="background-color: #F4A460;border-width: 0px;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="background-color:#F5DEB3;">
+                    <div id="divCandidatas2" class="form-group row">
+                        <div class="col-md-4">
+                            <button id="buttonPergunta2Candidato1" class="buttonCandidatoPergunta" data-bs-dismiss="modal"></button>
+                            <label id="labelcandidato1Pergunta" class="textLabel2"></label>
+                        </div>
+
+                        <div class="col-md-4">
+                            <button id="buttonPergunta2Candidato2" class="buttonCandidatoPergunta" data-bs-dismiss="modal"></button>
+                            <label id="labelcandidato2Pergunta" class="textLabel2"></label>
+                        </div>
+
+                        <div class="col-md-4">
+                            <button id="buttonPergunta2Candidato3" class="buttonCandidatoPergunta" data-bs-dismiss="modal"></button>
+                            <label id="labelcandidato3Pergunta" class="textLabel2"></label>
+                        </div>
+
+                        <div class="col-md-4">
+                            <button id="buttonPergunta2Candidato4" class="buttonCandidatoPergunta" data-bs-dismiss="modal"></button>
+                            <label id="labelcandidato4Pergunta" class="textLabel2"></label>
+                        </div>
+
+                        <div class="col-md-4">
+                            <button id="buttonPergunta2Candidato5" class="buttonCandidatoPergunta" data-bs-dismiss="modal"></button>
+                            <label id="labelcandidato5Pergunta" class="textLabel2"></label>
+                        </div>
+
+                        <div class="col-md-4">
+                            <button id="buttonPergunta2Candidato6" class="buttonCandidatoPergunta" data-bs-dismiss="modal"></button>
+                            <label id="labelcandidato6Pergunta" class="textLabel2"></label>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-pergunta-bonus" style="width:75%;top:5%;left:15%;">
+        <div class="modal-dialog" style="overflow-x:hidden;overflow-y:auto;max-width:600px;">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#F4A460;border:none">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="background-color: #F4A460;border-width: 0px;position:relative;left:540px;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="background-color:#F5DEB3;">
+                    <label class="textLabel3" style="color:#000;">Agora você tem o direito de fazer uma pergunta bônus para uma das candidatas a sua escolha, clique na candidata para fazer a pergunta bônus.</label>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-resposta" style="width:75%;top:5%;left:15%;">
+        <div class="modal-dialog" style="overflow-x:hidden;overflow-y:auto;max-width:600px;">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#F4A460;border:none">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="background-color: #F4A460;border-width: 0px;position:relative;left:540px;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="background-color:#F5DEB3;">
+                    <label class="textLabel3" style="color:#000;">Finalmente chegou a hora, clique na candidata com quem você irá se casar e seja feliz (ou não)...</label>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-regras" style="width:75%;top:5%;left:15%;">
+        <div class="modal-dialog" style="overflow-x:hidden;overflow-y:auto;max-width:900px;">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#F4A460;border:none">
+                    <h5 id="modal-titulo" class="modal-title textLabel3">Regras</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="background-color: #F4A460;border-width: 0px;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="background-color:#F5DEB3;text-align:center;">
+                    <label class="textLabel3" style="color:#000;">Você é um principe tentando encontrar sua princesa e terá que encontrá-la entre 7 candidatas, você fará uma pergunta para cada uma delas, dentre as seguintes perguntas:</label>
+                    <label class="textLabel3" style="color:#000;">1 - Quem é você?</label>
+                    <label class="textLabel3" style="color:#000;">2 - Quem é ela? (escolha a candidata sobre quem quer fazer a pergunta)</label>
+                    <label class="textLabel3" style="color:#000;">3 - Onde está a princesa?</label>
+                    <br />
+                    <label class="textLabel3" style="color:#000;">Como para algumas pessoas seria vantajoso que você se case com a pessoa errada, saiba que algumas candidatas te contarão mentiras, então lembre-se:</label>
+                    <label class="textLabel3" style="color:#000;">A rainha, o guarda e o gato sempre lhe dirão mentiras</label>
+                    <label class="textLabel3" style="color:#000;">A princesa e a fada madrinha sempre lhe contarão a verdade</label>
+                    <label class="textLabel3" style="color:#000;">A camponesa e o espião podem dizer tanto a verdade quanto a mentira, isso vai depender das motivações deles</label>
+                    <br />
+                    <label class="textLabel3" style="color:#000;">Após perguntar para todas as candidatas você poderá fazer uma pergunta bônus para uma candidata então escolha com sabedoria</label>
+                    <label class="textLabel3" style="color:#000;">Após fazer sua pergunta bônus, você terá que escolher com quem irá casar, isso é tudo, boa sorte nesta jornada caro principe.</label>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-casamento" style="width:75%;top:5%;left:15%;">
+        <div class="modal-dialog" style="overflow-x:hidden;overflow-y:auto;max-width:600px;">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#F4A460;border:none">
+                    <h5 id="modal-titulo" class="modal-title textLabel3">Parabéns, você se casou com...</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="background-color: #F4A460;border-width: 0px;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="background-color:#F5DEB3;">
+                    <div id="divCandidatas" class="form-group row">
+                        <div class="col-md-7" style="text-align:center;position:relative;left:120px;">
+                            <button id="buttonCandidatoCasamento" class="buttonCandidatoCasado" onclick="Refresh()"></button>
+                            <label id="labelcandidatoCasamento" class="textLabel">Candidata 1</label>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/lib/jqueryui/jquery-ui.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+    var quemperguntou;
+    var audio = document.getElementById('musicPlayer');
+    var candidatas1 = document.getElementById('divCandidatas');
+    var candidatas2 = document.getElementById('divCandidatas1');
+    var perguntas1 = document.getElementById('perguntas1');
+    var perguntas2 = document.getElementById('perguntas2');
+    var perguntas3 = document.getElementById('perguntas3');
+    var perguntas4 = document.getElementById('perguntas4');
+    var perguntas5 = document.getElementById('perguntas5');
+    var perguntas6 = document.getElementById('perguntas6');
+    var perguntas7 = document.getElementById('perguntas7');
+    var button = document.getElementById('initbutton');
+    var rules = document.getElementById('rulesbutton');
+    var tela1 = document.getElementById('div1');
+    var texto = document.getElementById('texto1');
+    var urlIndex = "Home/ObterTexto";
+    var urlTipos = "Home/PreencherTipos";
+    var urlCandidatos = "Home/PreencherCandidatos";
+    var lblTextoNarrador = document.getElementById('lblnarrador');
+    var tipos = new Int32Array(7);
+    var Candidatos;
+    var contador = 0;
+    var contar = true;
+    var perguntaBonus = true;
+    var escolha = false;
+    var escolhaVerificador = true;
+    var musicaVerificador = true;
+    var candidatoCasar;
+
+    function Refresh(){
+        window.location.reload();
+    }
+
+    const interval = setInterval(() => {
+        if(contar){
+            if(window.contador == 7)
+            {
+                $('#modal-pergunta-bonus').modal('show');
+                $('#modal-pergunta-bonus').addClass('animationFadeIn');
+                lblTextoNarrador.textContent = "Pergunta bônus";
+                contar = false;
+                perguntaBonus = false;
+            }
+        }
+        
+    }, 1000);
+
+    const interval2 = setInterval(() => {
+        if(perguntaBonus){
+            if(!contar)
+            {
+                if(escolhaVerificador){
+                    $('#modal-resposta').modal('show');
+                    $('#modal-resposta').addClass('animationFadeIn');
+                    lblTextoNarrador.textContent = "Escolha com quem irá se casar...";
+                    escolhaVerificador = false;
+                }
+            }
+        }
+        
+    }, 1000);
+
+    const interval3 = setInterval(() => {
+        if(perguntaBonus)
+        {
+            if(!contar)
+            {
+                if(!musicaVerificador)
+                {
+                    switch(candidatoCasar.tipo)
+                    {
+                        case 1:
+                            buttonCandidatoCasamento.style = 'background-image: url(../imgs/princesa.jpg);';
+                            labelcandidato1.textContent = "Larissa a Princesa";
+                            break;
+                        case 2:
+                            buttonCandidatoCasamento.style = 'background-image: url(../imgs/fada.jpg);';
+                            labelcandidato1.textContent = "a Fada madrinha";
+                            break;
+                        case 3:
+                            buttonCandidatoCasamento.style = 'background-image: url(../imgs/espião.jpg);';
+                            labelcandidato1.textContent = "Julio o Espião";
+                            break;
+                        case 4:
+                            buttonCandidatoCasamento.style = 'background-image: url(../imgs/camponesa.jpg);';
+                            labelcandidato1.textContent = "a Camponesa";
+                            break;
+                        case 5:
+                            buttonCandidatoCasamento.style = 'background-image: url(../imgs/rainha.jpg);';
+                            labelcandidato1.textContent = "a rainha má";
+                            break;
+                        case 6:
+                            buttonCandidatoCasamento.style = 'background-image: url(../imgs/gato.jpg);';
+                            labelcandidato1.textContent = "Felix o gato";
+                            break;
+                        default:
+                            buttonCandidatoCasamento.style = 'background-image: url(../imgs/guarda.jpg);';
+                            labelcandidato1.textContent = "Serjão o guarda";
+                            break;
+                    }
+                    $('#modal-casamento').modal('show');
+                    $('#modal-casamento').addClass('animationFadeIn');
+                } 
+            }
+        }
+        
+    }, 5000);
+    
+    button.addEventListener("click", function () {
+        $('#divAnimation').addClass('animationFadeIn');
+
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+        audio.volume = 0.02;
+        candidatas1.style.display = 'flex';
+        candidatas2.style.display = 'flex';
+
+        tela1.style.display = 'none';
+
+        $.ajax({
+            url: urlIndex,
+            success: function (content) {
+                lblTextoNarrador.textContent = content;
+            }
+        });
+
+
+        $.ajax({
+            url: urlCandidatos,
+        }).done(function (data) {
+            window.Candidatos = data;
+        });
+    });
+
+    rules.addEventListener("click", function () {
+        $('#modal-regras').modal('show');
+        $('#modal-regras').addClass('animationFadeIn');
+    });
+
+    buttonCandidato1.addEventListener("click", function () {
+        if (!Candidatos[0].pergunta1){
+            if (perguntas1.style.display == 'block') {
+                perguntas1.style.display = 'none';
+            }
+            else {
+                perguntas1.style.display = 'block';
+            }
+        }
+
+        if(!window.perguntaBonus){
+            if (perguntas1.style.display == 'block') {
+                perguntas1.style.display = 'none';
+            }
+            else {
+                perguntas1.style.display = 'block';
+            }
+        }
+
+        if(perguntaBonus){
+            if(!contar)
+            {
+                labelcandidato1.textContent = Candidatos[0].nomeReal;
+                labelcandidato2.textContent = Candidatos[1].nomeReal;
+                labelcandidato3.textContent = Candidatos[2].nomeReal;
+                labelcandidato4.textContent = Candidatos[3].nomeReal;
+                labelcandidato5.textContent = Candidatos[4].nomeReal;
+                labelcandidato6.textContent = Candidatos[5].nomeReal;
+                labelcandidato7.textContent = Candidatos[6].nomeReal;
+
+                window.candidatoCasar = Candidatos[0];
+                switch(Candidatos[0].tipo){
+                    case 1:
+                        buttonCandidato1.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato1.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato1.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato1.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato1.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato1.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato1.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[1].tipo){
+                    case 1:
+                        buttonCandidato2.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato2.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato2.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato2.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato2.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato2.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato2.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[2].tipo){
+                    case 1:
+                        buttonCandidato3.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato3.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato3.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato3.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato3.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato3.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato3.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[3].tipo){
+                    case 1:
+                        buttonCandidato4.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato4.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato4.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato4.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato4.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato4.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato4.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[4].tipo){
+                    case 1:
+                        buttonCandidato5.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato5.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato5.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato5.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato5.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato5.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato5.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[5].tipo){
+                    case 1:
+                        buttonCandidato6.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato6.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato6.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato6.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato6.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato6.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato6.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[6].tipo){
+                    case 1:
+                        buttonCandidato7.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato7.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato7.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato7.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato7.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato7.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato7.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+                
+                if(musicaVerificador)
+                {
+                    audio.src = 'audios/casamento.mp3';
+                    audio.load();
+                    audio.play();
+                    musicaVerificador = false;
+                }
+            }
+        }
+        
+        if (perguntas2.style.display == 'block') {
+            perguntas2.style.display = 'none';
+        }
+        
+        if (perguntas3.style.display == 'block') {
+            perguntas3.style.display = 'none';
+        }
+
+        if (perguntas4.style.display == 'block') {
+            perguntas4.style.display = 'none';
+        }
+
+        if (perguntas5.style.display == 'block') {
+            perguntas5.style.display = 'none';
+        }
+
+        if (perguntas6.style.display == 'block') {
+            perguntas6.style.display = 'none';
+        }
+
+        if (perguntas7.style.display == 'block') {
+            perguntas7.style.display = 'none';
+        }
+    });
+
+    buttonCandidato2.addEventListener("click", function () {
+        if (!Candidatos[1].pergunta1) {
+            if (perguntas2.style.display == 'block') {
+                perguntas2.style.display = 'none';
+            }
+            else {
+                perguntas2.style.display = 'block';
+            }
+        }
+
+        if (!window.perguntaBonus) {
+            if (perguntas2.style.display == 'block') {
+                perguntas2.style.display = 'none';
+            }
+            else {
+                perguntas2.style.display = 'block';
+            }
+        }
+
+        if(perguntaBonus){
+            if(!contar)
+            {
+                labelcandidato1.textContent = Candidatos[0].nomeReal;
+                labelcandidato2.textContent = Candidatos[1].nomeReal;
+                labelcandidato3.textContent = Candidatos[2].nomeReal;
+                labelcandidato4.textContent = Candidatos[3].nomeReal;
+                labelcandidato5.textContent = Candidatos[4].nomeReal;
+                labelcandidato6.textContent = Candidatos[5].nomeReal;
+                labelcandidato7.textContent = Candidatos[6].nomeReal;
+
+                window.candidatoCasar = Candidatos[1];
+                switch(Candidatos[0].tipo){
+                    case 1:
+                        buttonCandidato1.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato1.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato1.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato1.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato1.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato1.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato1.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[1].tipo){
+                    case 1:
+                        buttonCandidato2.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato2.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato2.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato2.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato2.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato2.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato2.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[2].tipo){
+                    case 1:
+                        buttonCandidato3.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato3.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato3.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato3.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato3.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato3.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato3.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[3].tipo){
+                    case 1:
+                        buttonCandidato4.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato4.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato4.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato4.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato4.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato4.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato4.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[4].tipo){
+                    case 1:
+                        buttonCandidato5.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato5.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato5.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato5.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato5.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato5.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato5.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[5].tipo){
+                    case 1:
+                        buttonCandidato6.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato6.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato6.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato6.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato6.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato6.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato6.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[6].tipo){
+                    case 1:
+                        buttonCandidato7.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato7.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato7.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato7.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato7.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato7.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato7.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+                
+                if(musicaVerificador)
+                {
+                    audio.src = 'audios/casamento.mp3';
+                    audio.load();
+                    audio.play();
+                    musicaVerificador = false;
+                }
+            }
+        }
+        
+        if (perguntas1.style.display == 'block') {
+            perguntas1.style.display = 'none';
+        }
+
+        if (perguntas3.style.display == 'block') {
+            perguntas3.style.display = 'none';
+        }
+
+        if (perguntas4.style.display == 'block') {
+            perguntas4.style.display = 'none';
+        }
+
+        if (perguntas5.style.display == 'block') {
+            perguntas5.style.display = 'none';
+        }
+
+        if (perguntas6.style.display == 'block') {
+            perguntas6.style.display = 'none';
+        }
+
+        if (perguntas7.style.display == 'block') {
+            perguntas7.style.display = 'none';
+        }
+    });
+
+    buttonCandidato3.addEventListener("click", function () {
+        if (!Candidatos[2].pergunta1) {
+            if (perguntas3.style.display == 'block') {
+                perguntas3.style.display = 'none';
+            }
+            else {
+                perguntas3.style.display = 'block';
+            }
+        }
+
+        if (!window.perguntaBonus) {
+            if (perguntas3.style.display == 'block') {
+                perguntas3.style.display = 'none';
+            }
+            else {
+                perguntas3.style.display = 'block';
+            }
+        }
+
+        if(perguntaBonus){
+            if(!contar)
+            {
+                labelcandidato1.textContent = Candidatos[0].nomeReal;
+                labelcandidato2.textContent = Candidatos[1].nomeReal;
+                labelcandidato3.textContent = Candidatos[2].nomeReal;
+                labelcandidato4.textContent = Candidatos[3].nomeReal;
+                labelcandidato5.textContent = Candidatos[4].nomeReal;
+                labelcandidato6.textContent = Candidatos[5].nomeReal;
+                labelcandidato7.textContent = Candidatos[6].nomeReal;
+
+                window.candidatoCasar = Candidatos[2];
+                switch(Candidatos[0].tipo){
+                    case 1:
+                        buttonCandidato1.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato1.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato1.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato1.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato1.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato1.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato1.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[1].tipo){
+                    case 1:
+                        buttonCandidato2.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato2.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato2.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato2.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato2.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato2.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato2.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[2].tipo){
+                    case 1:
+                        buttonCandidato3.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato3.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato3.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato3.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato3.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato3.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato3.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[3].tipo){
+                    case 1:
+                        buttonCandidato4.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato4.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato4.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato4.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato4.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato4.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato4.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[4].tipo){
+                    case 1:
+                        buttonCandidato5.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato5.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato5.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato5.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato5.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato5.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato5.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[5].tipo){
+                    case 1:
+                        buttonCandidato6.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato6.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato6.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato6.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato6.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato6.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato6.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[6].tipo){
+                    case 1:
+                        buttonCandidato7.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato7.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato7.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato7.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato7.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato7.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato7.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+                
+                if(musicaVerificador)
+                {
+                    audio.src = 'audios/casamento.mp3';
+                    audio.load();
+                    audio.play();
+                    musicaVerificador = false;
+                }
+            }
+        }
+        
+        if (perguntas1.style.display == 'block') {
+            perguntas1.style.display = 'none';
+        }
+
+        if (perguntas2.style.display == 'block') {
+            perguntas2.style.display = 'none';
+        }
+
+        if (perguntas4.style.display == 'block') {
+            perguntas4.style.display = 'none';
+        }
+
+        if (perguntas5.style.display == 'block') {
+            perguntas5.style.display = 'none';
+        }
+
+        if (perguntas6.style.display == 'block') {
+            perguntas6.style.display = 'none';
+        }
+
+        if (perguntas7.style.display == 'block') {
+            perguntas7.style.display = 'none';
+        }
+    });
+
+    buttonCandidato4.addEventListener("click", function () {
+        if (!Candidatos[3].pergunta1) {
+            if (perguntas4.style.display == 'block') {
+                perguntas4.style.display = 'none';
+            }
+            else {
+                perguntas4.style.display = 'block';
+            }
+        }
+
+        if (!window.perguntaBonus) {
+            if (perguntas4.style.display == 'block') {
+                perguntas4.style.display = 'none';
+            }
+            else {
+                perguntas4.style.display = 'block';
+            }
+        }
+
+        if(perguntaBonus){
+            if(!contar)
+            {
+                labelcandidato1.textContent = Candidatos[0].nomeReal;
+                labelcandidato2.textContent = Candidatos[1].nomeReal;
+                labelcandidato3.textContent = Candidatos[2].nomeReal;
+                labelcandidato4.textContent = Candidatos[3].nomeReal;
+                labelcandidato5.textContent = Candidatos[4].nomeReal;
+                labelcandidato6.textContent = Candidatos[5].nomeReal;
+                labelcandidato7.textContent = Candidatos[6].nomeReal;
+
+                window.candidatoCasar = Candidatos[3];
+                switch(Candidatos[0].tipo)
+                {
+                    case 1:
+                        buttonCandidato1.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato1.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato1.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato1.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato1.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato1.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato1.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[1].tipo){
+                    case 1:
+                        buttonCandidato2.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato2.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato2.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato2.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato2.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato2.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato2.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[2].tipo){
+                    case 1:
+                        buttonCandidato3.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato3.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato3.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato3.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato3.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato3.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato3.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[3].tipo){
+                    case 1:
+                        buttonCandidato4.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato4.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato4.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato4.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato4.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato4.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato4.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[4].tipo){
+                    case 1:
+                        buttonCandidato5.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato5.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato5.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato5.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato5.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato5.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato5.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[5].tipo){
+                    case 1:
+                        buttonCandidato6.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato6.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato6.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato6.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato6.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato6.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato6.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[6].tipo){
+                    case 1:
+                        buttonCandidato7.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato7.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato7.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato7.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato7.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato7.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato7.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+                
+                if(musicaVerificador)
+                {
+                    audio.src = 'audios/casamento.mp3';
+                    audio.load();
+                    audio.play();
+                    musicaVerificador = false;
+                }
+            }
+        }
+        
+        if (perguntas1.style.display == 'block') {
+            perguntas1.style.display = 'none';
+        }
+
+        if (perguntas2.style.display == 'block') {
+            perguntas2.style.display = 'none';
+        }
+
+        if (perguntas3.style.display == 'block') {
+            perguntas3.style.display = 'none';
+        }
+
+        if (perguntas5.style.display == 'block') {
+            perguntas5.style.display = 'none';
+        }
+
+        if (perguntas6.style.display == 'block') {
+            perguntas6.style.display = 'none';
+        }
+
+        if (perguntas7.style.display == 'block') {
+            perguntas7.style.display = 'none';
+        }
+    });
+
+    buttonCandidato5.addEventListener("click", function () {
+        if (!Candidatos[4].pergunta1) {
+            if (perguntas5.style.display == 'block') {
+                perguntas5.style.display = 'none';
+            }
+            else {
+                perguntas5.style.display = 'block';
+            }
+        }
+
+        if (!window.perguntaBonus) {
+            if (perguntas5.style.display == 'block') {
+                perguntas5.style.display = 'none';
+            }
+            else {
+                perguntas5.style.display = 'block';
+            }
+        }
+
+        if(perguntaBonus){
+            if(!contar)
+            {
+                labelcandidato1.textContent = Candidatos[0].nomeReal;
+                labelcandidato2.textContent = Candidatos[1].nomeReal;
+                labelcandidato3.textContent = Candidatos[2].nomeReal;
+                labelcandidato4.textContent = Candidatos[3].nomeReal;
+                labelcandidato5.textContent = Candidatos[4].nomeReal;
+                labelcandidato6.textContent = Candidatos[5].nomeReal;
+                labelcandidato7.textContent = Candidatos[6].nomeReal;
+
+                window.candidatoCasar = Candidatos[4];
+                switch(Candidatos[0].tipo)
+                {
+                    case 1:
+                        buttonCandidato1.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato1.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato1.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato1.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato1.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato1.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato1.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[1].tipo){
+                    case 1:
+                        buttonCandidato2.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato2.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato2.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato2.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato2.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato2.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato2.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[2].tipo){
+                    case 1:
+                        buttonCandidato3.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato3.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato3.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato3.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato3.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato3.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato3.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[3].tipo){
+                    case 1:
+                        buttonCandidato4.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato4.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato4.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato4.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato4.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato4.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato4.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[4].tipo){
+                    case 1:
+                        buttonCandidato5.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato5.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato5.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato5.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato5.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato5.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato5.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[5].tipo){
+                    case 1:
+                        buttonCandidato6.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato6.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato6.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato6.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato6.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato6.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato6.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch(Candidatos[6].tipo){
+                    case 1:
+                        buttonCandidato7.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato7.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato7.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato7.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato7.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato7.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato7.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+                
+                if(musicaVerificador)
+                {
+                    audio.src = 'audios/casamento.mp3';
+                    audio.load();
+                    audio.play();
+                    musicaVerificador = false;
+                }
+            }
+        }
+        
+        if (perguntas1.style.display == 'block') {
+            perguntas1.style.display = 'none';
+        }
+
+        if (perguntas2.style.display == 'block') {
+            perguntas2.style.display = 'none';
+        }
+
+        if (perguntas3.style.display == 'block') {
+            perguntas3.style.display = 'none';
+        }
+
+        if (perguntas4.style.display == 'block') {
+            perguntas4.style.display = 'none';
+        }
+
+        if (perguntas6.style.display == 'block') {
+            perguntas6.style.display = 'none';
+        }
+
+        if (perguntas7.style.display == 'block') {
+            perguntas7.style.display = 'none';
+        }
+    });
+
+    buttonCandidato6.addEventListener("click", function () {
+        if (!Candidatos[5].pergunta1) {
+            if (perguntas6.style.display == 'block') {
+                perguntas6.style.display = 'none';
+            }
+            else {
+                perguntas6.style.display = 'block';
+            }
+        }
+
+        if (!window.perguntaBonus) {
+            if (perguntas6.style.display == 'block') {
+                perguntas6.style.display = 'none';
+            }
+            else {
+                perguntas6.style.display = 'block';
+            }
+        }
+        
+        if(perguntaBonus){
+            if(!contar)
+            {
+                labelcandidato1.textContent = Candidatos[0].nomeReal;
+                labelcandidato2.textContent = Candidatos[1].nomeReal;
+                labelcandidato3.textContent = Candidatos[2].nomeReal;
+                labelcandidato4.textContent = Candidatos[3].nomeReal;
+                labelcandidato5.textContent = Candidatos[4].nomeReal;
+                labelcandidato6.textContent = Candidatos[5].nomeReal;
+                labelcandidato7.textContent = Candidatos[6].nomeReal;
+
+                window.candidatoCasar = Candidatos[5];
+                switch (Candidatos[0].tipo) {
+                    case 1:
+                        buttonCandidato1.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato1.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato1.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato1.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato1.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato1.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato1.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch (Candidatos[1].tipo) {
+                    case 1:
+                        buttonCandidato2.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato2.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato2.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato2.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato2.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato2.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato2.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch (Candidatos[2].tipo) {
+                    case 1:
+                        buttonCandidato3.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato3.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato3.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato3.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato3.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato3.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato3.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch (Candidatos[3].tipo) {
+                    case 1:
+                        buttonCandidato4.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato4.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato4.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato4.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato4.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato4.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato4.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch (Candidatos[4].tipo) {
+                    case 1:
+                        buttonCandidato5.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato5.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato5.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato5.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato5.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato5.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato5.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch (Candidatos[5].tipo) {
+                    case 1:
+                        buttonCandidato6.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato6.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato6.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato6.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato6.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato6.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato6.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch (Candidatos[6].tipo) {
+                    case 1:
+                        buttonCandidato7.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato7.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato7.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato7.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato7.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato7.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato7.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                if (musicaVerificador) {
+                    audio.src = 'audios/casamento.mp3';
+                    audio.load();
+                    audio.play();
+                    musicaVerificador = false;
+                }
+            }
+        }
+
+        if (perguntas1.style.display == 'block') {
+            perguntas1.style.display = 'none';
+        }
+
+        if (perguntas2.style.display == 'block') {
+            perguntas2.style.display = 'none';
+        }
+
+        if (perguntas3.style.display == 'block') {
+            perguntas3.style.display = 'none';
+        }
+
+        if (perguntas4.style.display == 'block') {
+            perguntas4.style.display = 'none';
+        }
+
+        if (perguntas5.style.display == 'block') {
+            perguntas5.style.display = 'none';
+        }
+
+        if (perguntas7.style.display == 'block') {
+            perguntas7.style.display = 'none';
+        }
+    });
+
+    buttonCandidato7.addEventListener("click", function () {
+        if (!Candidatos[6].pergunta1) {
+            if (perguntas7.style.display == 'block') {
+                perguntas7.style.display = 'none';
+            }
+            else {
+                perguntas7.style.display = 'block';
+            }
+        }
+        
+        if (!window.perguntaBonus) {
+            if (perguntas7.style.display == 'block') {
+                perguntas7.style.display = 'none';
+            }
+            else {
+                perguntas7.style.display = 'block';
+            }
+        }
+
+        if(perguntaBonus){
+            if(!contar)
+            {
+                labelcandidato1.textContent = Candidatos[0].nomeReal;
+                labelcandidato2.textContent = Candidatos[1].nomeReal;
+                labelcandidato3.textContent = Candidatos[2].nomeReal;
+                labelcandidato4.textContent = Candidatos[3].nomeReal;
+                labelcandidato5.textContent = Candidatos[4].nomeReal;
+                labelcandidato6.textContent = Candidatos[5].nomeReal;
+                labelcandidato7.textContent = Candidatos[6].nomeReal;
+
+                window.candidatoCasar = Candidatos[6];
+                switch (Candidatos[0].tipo) {
+                    case 1:
+                        buttonCandidato1.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato1.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato1.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato1.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato1.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato1.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato1.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch (Candidatos[1].tipo) {
+                    case 1:
+                        buttonCandidato2.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato2.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato2.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato2.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato2.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato2.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato2.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch (Candidatos[2].tipo) {
+                    case 1:
+                        buttonCandidato3.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato3.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato3.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato3.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato3.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato3.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato3.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch (Candidatos[3].tipo) {
+                    case 1:
+                        buttonCandidato4.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato4.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato4.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato4.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato4.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato4.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato4.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch (Candidatos[4].tipo) {
+                    case 1:
+                        buttonCandidato5.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato5.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato5.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato5.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato5.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato5.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato5.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch (Candidatos[5].tipo) {
+                    case 1:
+                        buttonCandidato6.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato6.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato6.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato6.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato6.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato6.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato6.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                switch (Candidatos[6].tipo) {
+                    case 1:
+                        buttonCandidato7.style = 'background-image: url(../imgs/princesa.jpg);';
+                        break;
+                    case 2:
+                        buttonCandidato7.style = 'background-image: url(../imgs/fada.jpg);';
+                        break;
+                    case 3:
+                        buttonCandidato7.style = 'background-image: url(../imgs/espião.jpg);';
+                        break;
+                    case 4:
+                        buttonCandidato7.style = 'background-image: url(../imgs/camponesa.jpg);';
+                        break;
+                    case 5:
+                        buttonCandidato7.style = 'background-image: url(../imgs/rainha.jpg);';
+                        break;
+                    case 6:
+                        buttonCandidato7.style = 'background-image: url(../imgs/gato.jpg);';
+                        break;
+                    default:
+                        buttonCandidato7.style = 'background-image: url(../imgs/guarda.jpg);';
+                        break;
+                }
+
+                if (musicaVerificador) {
+                    audio.src = 'audios/casamento.mp3';
+                    audio.load();
+                    audio.play();
+                    musicaVerificador = false;
+                }
+            }
+        }
+
+        if (perguntas1.style.display == 'block') {
+            perguntas1.style.display = 'none';
+        }
+
+        if (perguntas2.style.display == 'block') {
+            perguntas2.style.display = 'none';
+        }
+
+        if (perguntas3.style.display == 'block') {
+            perguntas3.style.display = 'none';
+        }
+
+        if (perguntas4.style.display == 'block') {
+            perguntas4.style.display = 'none';
+        }
+
+        if (perguntas5.style.display == 'block') {
+            perguntas5.style.display = 'none';
+        }
+
+        if (perguntas6.style.display == 'block') {
+            perguntas6.style.display = 'none';
+        }
+    });
+
+    $('#modal-pergunta2').draggable();
+
+    buttonCandidato1pergunta1.addEventListener("click", function () {
+        if(window.Candidatos[0].pergunta1 == false){
+            var candidatoEscolhido = JSON.stringify(Candidatos[0]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta1",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato1resposta1.textContent = content;
+                    window.Candidatos[0].resposta1 = content;
+                }
+            });
+
+            perguntas1.style.display = 'none';
+        
+            window.Candidatos[0].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.Candidatos[0].pergunta2 == false && !window.escolha){
+            var candidatoEscolhido = JSON.stringify(Candidatos[0]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta1",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato1resposta2.textContent = content;
+                    window.Candidatos[0].resposta2 = content;
+                }
+            });
+
+            perguntas1.style.display = 'none';
+
+            window.Candidatos[0].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+        
+    });
+
+    buttonCandidato1pergunta2.addEventListener("click", function () {
+        window.quemperguntou = Candidatos[0];
+        $('#modal-pergunta2').modal('show');
+        labelcandidato1Pergunta.textContent = Candidatos[1].nome;
+        labelcandidato2Pergunta.textContent = Candidatos[2].nome;
+        labelcandidato3Pergunta.textContent = Candidatos[3].nome;
+        labelcandidato4Pergunta.textContent = Candidatos[4].nome;
+        labelcandidato5Pergunta.textContent = Candidatos[5].nome;
+        labelcandidato6Pergunta.textContent = Candidatos[6].nome;
+    });
+
+    buttonCandidato1pergunta3.addEventListener("click", function () {
+        if(window.Candidatos[0].pergunta1 == false){
+            var candidatoEscolhido = JSON.stringify(Candidatos[0]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta3",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato1resposta1.textContent = content;
+                    window.Candidatos[0].resposta1 = content;
+                }
+            });
+
+            perguntas1.style.display = 'none';
+
+            window.Candidatos[0].pergunta1 = true;
+
+            window.contador++;
+        }
+         else if(window.Candidatos[0].pergunta2 == false && !window.escolha){
+            var candidatoEscolhido = JSON.stringify(Candidatos[0]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta3",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato1resposta2.textContent = content;
+                    window.Candidatos[0].resposta2 = content;
+                }
+            });
+
+            perguntas1.style.display = 'none';
+
+            window.Candidatos[0].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+         }
+    });
+
+    buttonCandidato2pergunta1.addEventListener("click", function () {
+        if(window.Candidatos[1].pergunta1 == false){
+            var candidatoEscolhido = JSON.stringify(Candidatos[1]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta1",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato2resposta1.textContent = content;
+                    window.Candidatos[1].resposta1 = content;
+                }
+            });
+
+            perguntas2.style.display = 'none';
+
+            window.Candidatos[1].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.Candidatos[1].pergunta2 == false && !window.escolha){
+            var candidatoEscolhido = JSON.stringify(Candidatos[1]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta1",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato2resposta2.textContent = content;
+                    window.Candidatos[1].resposta2 = content;
+                }
+            });
+
+            perguntas2.style.display = 'none';
+
+            window.Candidatos[1].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonCandidato2pergunta2.addEventListener("click", function () {
+        window.quemperguntou = Candidatos[1];
+        $('#modal-pergunta2').modal('show');
+        labelcandidato1Pergunta.textContent = Candidatos[0].nome;
+        labelcandidato2Pergunta.textContent = Candidatos[2].nome;
+        labelcandidato3Pergunta.textContent = Candidatos[3].nome;
+        labelcandidato4Pergunta.textContent = Candidatos[4].nome;
+        labelcandidato5Pergunta.textContent = Candidatos[5].nome;
+        labelcandidato6Pergunta.textContent = Candidatos[6].nome;
+    });
+
+    buttonCandidato2pergunta3.addEventListener("click", function () {
+        if(window.Candidatos[1].pergunta1 == false){
+            var candidatoEscolhido = JSON.stringify(Candidatos[1]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta3",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato2resposta1.textContent = content;
+                    window.Candidatos[1].resposta1 = content;
+                }
+            });
+
+            perguntas2.style.display = 'none';
+
+            window.Candidatos[1].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.Candidatos[1].pergunta2 == false && !window.escolha){
+            var candidatoEscolhido = JSON.stringify(Candidatos[1]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta3",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato2resposta2.textContent = content;
+                    window.Candidatos[1].resposta2 = content;
+                }
+            });
+
+            perguntas2.style.display = 'none';
+
+            window.Candidatos[1].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonCandidato3pergunta1.addEventListener("click", function () {
+        if(window.Candidatos[2].pergunta1 == false){
+            var candidatoEscolhido = JSON.stringify(Candidatos[2]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta1",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato3resposta1.textContent = content;
+                    window.Candidatos[2].resposta1 = content;
+                }
+            });
+
+            perguntas3.style.display = 'none';
+
+            window.Candidatos[2].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.Candidatos[2].pergunta2 == false && !window.escolha){
+            var candidatoEscolhido = JSON.stringify(Candidatos[2]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta1",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato3resposta2.textContent = content;
+                    window.Candidatos[2].resposta2 = content;
+                }
+            });
+
+            perguntas3.style.display = 'none';
+
+            window.Candidatos[2].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonCandidato3pergunta2.addEventListener("click", function () {
+        window.quemperguntou = Candidatos[2];
+        $('#modal-pergunta2').modal('show');
+        labelcandidato1Pergunta.textContent = Candidatos[0].nome;
+        labelcandidato2Pergunta.textContent = Candidatos[1].nome;
+        labelcandidato3Pergunta.textContent = Candidatos[3].nome;
+        labelcandidato4Pergunta.textContent = Candidatos[4].nome;
+        labelcandidato5Pergunta.textContent = Candidatos[5].nome;
+        labelcandidato6Pergunta.textContent = Candidatos[6].nome;
+    });
+
+    buttonCandidato3pergunta3.addEventListener("click", function () {
+        if(window.Candidatos[2].pergunta1 == false){
+            var candidatoEscolhido = JSON.stringify(Candidatos[2]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta3",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato3resposta1.textContent = content;
+                    window.Candidatos[2].resposta1 = content;
+                }
+            });
+
+            perguntas3.style.display = 'none';
+
+            window.Candidatos[2].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.Candidatos[2].pergunta2 == false && !window.escolha){
+            var candidatoEscolhido = JSON.stringify(Candidatos[2]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta3",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato3resposta2.textContent = content;
+                    window.Candidatos[2].resposta2 = content;
+                }
+            });
+
+            perguntas3.style.display = 'none';
+
+            window.Candidatos[2].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonCandidato4pergunta1.addEventListener("click", function () {
+        if(window.Candidatos[3].pergunta1 == false){
+            var candidatoEscolhido = JSON.stringify(Candidatos[3]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta1",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato4resposta1.textContent = content;
+                    window.Candidatos[3].resposta1 = content;
+                }
+            });
+
+            perguntas4.style.display = 'none';
+
+            window.Candidatos[3].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.Candidatos[3].pergunta2 == false && !window.escolha){
+            var candidatoEscolhido = JSON.stringify(Candidatos[3]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta1",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato4resposta2.textContent = content;
+                    window.Candidatos[3].resposta2 = content;
+                }
+            });
+
+            perguntas4.style.display = 'none';
+
+            window.Candidatos[3].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonCandidato4pergunta2.addEventListener("click", function () {
+        window.quemperguntou = Candidatos[3];
+        $('#modal-pergunta2').modal('show');
+        labelcandidato1Pergunta.textContent = Candidatos[0].nome;
+        labelcandidato2Pergunta.textContent = Candidatos[1].nome;
+        labelcandidato3Pergunta.textContent = Candidatos[2].nome;
+        labelcandidato4Pergunta.textContent = Candidatos[4].nome;
+        labelcandidato5Pergunta.textContent = Candidatos[5].nome;
+        labelcandidato6Pergunta.textContent = Candidatos[6].nome;
+    });
+
+    buttonCandidato4pergunta3.addEventListener("click", function () {
+        if(window.Candidatos[3].pergunta1 == false){
+            var candidatoEscolhido = JSON.stringify(Candidatos[3]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta3",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato4resposta1.textContent = content;
+                    window.Candidatos[3].resposta1 = content;
+                }
+            });
+
+            perguntas4.style.display = 'none';
+
+            window.Candidatos[3].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.Candidatos[3].pergunta2 == false && !window.escolha){
+            var candidatoEscolhido = JSON.stringify(Candidatos[3]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta3",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato4resposta2.textContent = content;
+                    window.Candidatos[3].resposta2 = content;
+                }
+            });
+
+            perguntas4.style.display = 'none';
+
+            window.Candidatos[3].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonCandidato5pergunta1.addEventListener("click", function () {
+        if(window.Candidatos[4].pergunta1 == false){
+            var candidatoEscolhido = JSON.stringify(Candidatos[4]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta1",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato5resposta1.textContent = content;
+                    window.Candidatos[4].resposta1 = content;
+                }
+            });
+
+            perguntas5.style.display = 'none';
+
+            window.Candidatos[4].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.Candidatos[4].pergunta2 == false && !window.escolha){
+            var candidatoEscolhido = JSON.stringify(Candidatos[4]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta1",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato5resposta2.textContent = content;
+                    window.Candidatos[4].resposta2 = content;
+                }
+            });
+
+            perguntas5.style.display = 'none';
+
+            window.Candidatos[4].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonCandidato5pergunta2.addEventListener("click", function () {
+        window.quemperguntou = Candidatos[4];
+        $('#modal-pergunta2').modal('show');
+        labelcandidato1Pergunta.textContent = Candidatos[0].nome;
+        labelcandidato2Pergunta.textContent = Candidatos[1].nome;
+        labelcandidato3Pergunta.textContent = Candidatos[2].nome;
+        labelcandidato4Pergunta.textContent = Candidatos[3].nome;
+        labelcandidato5Pergunta.textContent = Candidatos[5].nome;
+        labelcandidato6Pergunta.textContent = Candidatos[6].nome;
+    });
+
+    buttonCandidato5pergunta3.addEventListener("click", function () {
+        if(window.Candidatos[4].pergunta1 == false){
+            var candidatoEscolhido = JSON.stringify(Candidatos[4]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta3",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato5resposta1.textContent = content;
+                    window.Candidatos[4].resposta1 = content;
+                }
+            });
+
+            perguntas5.style.display = 'none';
+
+            window.Candidatos[4].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.Candidatos[4].pergunta2 == false && !window.escolha){
+            var candidatoEscolhido = JSON.stringify(Candidatos[4]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta3",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato5resposta2.textContent = content;
+                    window.Candidatos[4].resposta2 = content;
+                }
+            });
+
+            perguntas5.style.display = 'none';
+
+            window.Candidatos[4].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonCandidato6pergunta1.addEventListener("click", function () {
+        if(window.Candidatos[5].pergunta1 == false){
+            var candidatoEscolhido = JSON.stringify(Candidatos[5]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta1",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato6resposta1.textContent = content;
+                    window.Candidatos[5].resposta1 = content;
+                }
+            });
+
+            perguntas6.style.display = 'none';
+
+            window.Candidatos[5].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.Candidatos[5].pergunta2 == false && !window.escolha){
+            var candidatoEscolhido = JSON.stringify(Candidatos[5]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta1",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato6resposta2.textContent = content;
+                    window.Candidatos[5].resposta2 = content;
+                }
+            });
+
+            perguntas6.style.display = 'none';
+
+            window.Candidatos[5].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonCandidato6pergunta2.addEventListener("click", function () {
+        window.quemperguntou = Candidatos[5];
+        $('#modal-pergunta2').modal('show');
+        labelcandidato1Pergunta.textContent = Candidatos[0].nome;
+        labelcandidato2Pergunta.textContent = Candidatos[1].nome;
+        labelcandidato3Pergunta.textContent = Candidatos[2].nome;
+        labelcandidato4Pergunta.textContent = Candidatos[3].nome;
+        labelcandidato5Pergunta.textContent = Candidatos[4].nome;
+        labelcandidato6Pergunta.textContent = Candidatos[6].nome;
+    });
+
+    buttonCandidato6pergunta3.addEventListener("click", function () {
+        if(window.Candidatos[5].pergunta1 == false){
+            var candidatoEscolhido = JSON.stringify(Candidatos[5]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta3",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato6resposta1.textContent = content;
+                    window.Candidatos[5].resposta1 = content;
+                }
+            });
+
+            perguntas6.style.display = 'none';
+
+            window.Candidatos[5].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.Candidatos[5].pergunta2 == false && !window.escolha){
+            var candidatoEscolhido = JSON.stringify(Candidatos[5]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta3",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato6resposta2.textContent = content;
+                    window.Candidatos[5].resposta2 = content;
+                }
+            });
+
+            perguntas6.style.display = 'none';
+
+            window.Candidatos[5].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonCandidato7pergunta1.addEventListener("click", function () {
+        if(window.Candidatos[6].pergunta1 == false){
+            var candidatoEscolhido = JSON.stringify(Candidatos[6]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta1",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato7resposta1.textContent = content;
+                    window.Candidatos[6].resposta1 = content;
+                }
+            });
+
+            perguntas7.style.display = 'none';
+
+            window.Candidatos[6].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.Candidatos[6].pergunta2 == false && !window.escolha){
+            var candidatoEscolhido = JSON.stringify(Candidatos[6]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta1",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato7resposta2.textContent = content;
+                    window.Candidatos[6].resposta2 = content;
+                }
+            });
+
+            perguntas7.style.display = 'none';
+
+            window.Candidatos[6].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonCandidato7pergunta2.addEventListener("click", function () {
+        window.quemperguntou = Candidatos[6];
+        $('#modal-pergunta2').modal('show');
+        labelcandidato1Pergunta.textContent = Candidatos[0].nome;
+        labelcandidato2Pergunta.textContent = Candidatos[1].nome;
+        labelcandidato3Pergunta.textContent = Candidatos[2].nome;
+        labelcandidato4Pergunta.textContent = Candidatos[3].nome;
+        labelcandidato5Pergunta.textContent = Candidatos[4].nome;
+        labelcandidato6Pergunta.textContent = Candidatos[5].nome;
+    });
+
+    buttonCandidato7pergunta3.addEventListener("click", function () {
+        if(window.Candidatos[6].pergunta1 == false){
+            var candidatoEscolhido = JSON.stringify(Candidatos[6]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta3",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato7resposta1.textContent = content;
+                    window.Candidatos[6].resposta1 = content;
+                }
+            });
+
+            perguntas7.style.display = 'none';
+
+            window.Candidatos[6].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.Candidatos[6].pergunta2 == false && !window.escolha){
+            var candidatoEscolhido = JSON.stringify(Candidatos[6]);
+            var listaCandidatos = JSON.stringify(Candidatos);
+            $.ajax({
+                url: "Home/pergunta3",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos },
+                success: function (content) {
+                    labelcandidato7resposta2.textContent = content;
+                    window.Candidatos[6].resposta2 = content;
+                }
+            });
+
+            perguntas7.style.display = 'none';
+
+            window.Candidatos[6].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonPergunta2Candidato1.addEventListener("click", function () {
+        if (window.quemperguntou.pergunta1 == false) {
+            var candidatoPerguntado = JSON.stringify(labelcandidato1Pergunta.textContent);
+            var candidatoEscolhido = JSON.stringify(window.quemperguntou);
+            var listaCandidatos = JSON.stringify(Candidatos);
+
+            $.ajax({
+                url: "Home/pergunta2",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos, candidatoPerguntado: candidatoPerguntado },
+                success: function (content) {
+                    switch(window.quemperguntou.numero){
+                        case 1:
+                            labelcandidato1resposta1.textContent = content;
+                            perguntas1.style.display = 'none';
+                            break;
+                        case 2:
+                            labelcandidato2resposta1.textContent = content;
+                            perguntas2.style.display = 'none';
+
+                            break;
+                        case 3:
+                            labelcandidato3resposta1.textContent = content;
+                            perguntas3.style.display = 'none';
+
+                            break;
+                        case 4:
+                            labelcandidato4resposta1.textContent = content;
+                            perguntas4.style.display = 'none';
+
+                            break;
+                        case 5:
+                            labelcandidato5resposta1.textContent = content;
+                            perguntas5.style.display = 'none';
+
+                            break;
+                        case 6:
+                            labelcandidato6resposta1.textContent = content;
+                            perguntas6.style.display = 'none';
+
+                            break;
+                        default:
+                            labelcandidato7resposta1.textContent = content;
+                            perguntas7.style.display = 'none';
+
+                            break;
+                    }
+                    window.Candidatos[window.quemperguntou.numero - 1].resposta1 = content;
+                } 
+            });
+            window.Candidatos[window.quemperguntou.numero - 1].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.quemperguntou.pergunta2 == false && !window.escolha){
+            var candidatoPerguntado = JSON.stringify(labelcandidato1Pergunta.textContent);
+            var candidatoEscolhido = JSON.stringify(window.quemperguntou);
+            var listaCandidatos = JSON.stringify(Candidatos);
+
+            $.ajax({
+                url: "Home/pergunta2",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos, candidatoPerguntado: candidatoPerguntado },
+                success: function (content) {
+                    switch (window.quemperguntou.numero) {
+                        case 1:
+                            labelcandidato1resposta2.textContent = content;
+                            perguntas1.style.display = 'none';
+                            break;
+                        case 2:
+                            labelcandidato2resposta2.textContent = content;
+                            perguntas2.style.display = 'none';
+
+                            break;
+                        case 3:
+                            labelcandidato3resposta2.textContent = content;
+                            perguntas3.style.display = 'none';
+
+                            break;
+                        case 4:
+                            labelcandidato4resposta2.textContent = content;
+                            perguntas4.style.display = 'none';
+
+                            break;
+                        case 5:
+                            labelcandidato5resposta2.textContent = content;
+                            perguntas5.style.display = 'none';
+
+                            break;
+                        case 6:
+                            labelcandidato6resposta2.textContent = content;
+                            perguntas6.style.display = 'none';
+
+                            break;
+                        default:
+                            labelcandidato7resposta2.textContent = content;
+                            perguntas7.style.display = 'none';
+
+                            break;
+                    }
+                    window.Candidatos[window.quemperguntou.numero - 1].resposta2 = content;
+                }
+            });
+            window.Candidatos[window.quemperguntou.numero - 1].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonPergunta2Candidato2.addEventListener("click", function () {
+        if (window.quemperguntou.pergunta1 == false) {
+            var candidatoPerguntado = JSON.stringify(labelcandidato2Pergunta.textContent);
+            var candidatoEscolhido = JSON.stringify(window.quemperguntou);
+            var listaCandidatos = JSON.stringify(Candidatos);
+
+            $.ajax({
+                url: "Home/pergunta2",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos, candidatoPerguntado: candidatoPerguntado },
+                success: function (content) {
+                    switch (window.quemperguntou.numero) {
+                        case 1:
+                            labelcandidato1resposta1.textContent = content;
+                            perguntas1.style.display = 'none';
+                            break;
+                        case 2:
+                            labelcandidato2resposta1.textContent = content;
+                            perguntas2.style.display = 'none';
+
+                            break;
+                        case 3:
+                            labelcandidato3resposta1.textContent = content;
+                            perguntas3.style.display = 'none';
+
+                            break;
+                        case 4:
+                            labelcandidato4resposta1.textContent = content;
+                            perguntas4.style.display = 'none';
+
+                            break;
+                        case 5:
+                            labelcandidato5resposta1.textContent = content;
+                            perguntas5.style.display = 'none';
+
+                            break;
+                        case 6:
+                            labelcandidato6resposta1.textContent = content;
+                            perguntas6.style.display = 'none';
+
+                            break;
+                        default:
+                            labelcandidato7resposta1.textContent = content;
+                            perguntas7.style.display = 'none';
+
+                            break;
+                    }
+                    window.Candidatos[window.quemperguntou.numero - 1].resposta1 = content;
+                }
+            });
+            window.Candidatos[window.quemperguntou.numero - 1].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.quemperguntou.pergunta2 == false && !window.escolha){
+            var candidatoPerguntado = JSON.stringify(labelcandidato2Pergunta.textContent);
+            var candidatoEscolhido = JSON.stringify(window.quemperguntou);
+            var listaCandidatos = JSON.stringify(Candidatos);
+
+            $.ajax({
+                url: "Home/pergunta2",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos, candidatoPerguntado: candidatoPerguntado },
+                success: function (content) {
+                    switch (window.quemperguntou.numero) {
+                        case 1:
+                            labelcandidato1resposta2.textContent = content;
+                            perguntas1.style.display = 'none';
+                            break;
+                        case 2:
+                            labelcandidato2resposta2.textContent = content;
+                            perguntas2.style.display = 'none';
+
+                            break;
+                        case 3:
+                            labelcandidato3resposta2.textContent = content;
+                            perguntas3.style.display = 'none';
+
+                            break;
+                        case 4:
+                            labelcandidato4resposta2.textContent = content;
+                            perguntas4.style.display = 'none';
+
+                            break;
+                        case 5:
+                            labelcandidato5resposta2.textContent = content;
+                            perguntas5.style.display = 'none';
+
+                            break;
+                        case 6:
+                            labelcandidato6resposta2.textContent = content;
+                            perguntas6.style.display = 'none';
+
+                            break;
+                        default:
+                            labelcandidato7resposta2.textContent = content;
+                            perguntas7.style.display = 'none';
+
+                            break;
+                    }
+                    window.Candidatos[window.quemperguntou.numero - 1].resposta2 = content;
+                }
+            });
+            window.Candidatos[window.quemperguntou.numero - 1].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonPergunta2Candidato3.addEventListener("click", function () {
+        if (window.quemperguntou.pergunta1 == false) {
+            var candidatoPerguntado = JSON.stringify(labelcandidato3Pergunta.textContent);
+            var candidatoEscolhido = JSON.stringify(window.quemperguntou);
+            var listaCandidatos = JSON.stringify(Candidatos);
+
+            $.ajax({
+                url: "Home/pergunta2",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos, candidatoPerguntado: candidatoPerguntado },
+                success: function (content) {
+                    switch (window.quemperguntou.numero) {
+                        case 1:
+                            labelcandidato1resposta1.textContent = content;
+                            perguntas1.style.display = 'none';
+                            break;
+                        case 2:
+                            labelcandidato2resposta1.textContent = content;
+                            perguntas2.style.display = 'none';
+
+                            break;
+                        case 3:
+                            labelcandidato3resposta1.textContent = content;
+                            perguntas3.style.display = 'none';
+
+                            break;
+                        case 4:
+                            labelcandidato4resposta1.textContent = content;
+                            perguntas4.style.display = 'none';
+
+                            break;
+                        case 5:
+                            labelcandidato5resposta1.textContent = content;
+                            perguntas5.style.display = 'none';
+
+                            break;
+                        case 6:
+                            labelcandidato6resposta1.textContent = content;
+                            perguntas6.style.display = 'none';
+
+                            break;
+                        default:
+                            labelcandidato7resposta1.textContent = content;
+                            perguntas7.style.display = 'none';
+
+                            break;
+                    }
+                    window.Candidatos[window.quemperguntou.numero - 1].resposta1 = content;
+                }
+            });
+            window.Candidatos[window.quemperguntou.numero - 1].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.quemperguntou.pergunta2 == false && !window.escolha){
+            var candidatoPerguntado = JSON.stringify(labelcandidato3Pergunta.textContent);
+            var candidatoEscolhido = JSON.stringify(window.quemperguntou);
+            var listaCandidatos = JSON.stringify(Candidatos);
+
+            $.ajax({
+                url: "Home/pergunta2",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos, candidatoPerguntado: candidatoPerguntado },
+                success: function (content) {
+                    switch (window.quemperguntou.numero) {
+                        case 1:
+                            labelcandidato1resposta2.textContent = content;
+                            perguntas1.style.display = 'none';
+                            break;
+                        case 2:
+                            labelcandidato2resposta2.textContent = content;
+                            perguntas2.style.display = 'none';
+
+                            break;
+                        case 3:
+                            labelcandidato3resposta2.textContent = content;
+                            perguntas3.style.display = 'none';
+
+                            break;
+                        case 4:
+                            labelcandidato4resposta2.textContent = content;
+                            perguntas4.style.display = 'none';
+
+                            break;
+                        case 5:
+                            labelcandidato5resposta2.textContent = content;
+                            perguntas5.style.display = 'none';
+
+                            break;
+                        case 6:
+                            labelcandidato6resposta2.textContent = content;
+                            perguntas6.style.display = 'none';
+
+                            break;
+                        default:
+                            labelcandidato7resposta2.textContent = content;
+                            perguntas7.style.display = 'none';
+
+                            break;
+                    }
+                    window.Candidatos[window.quemperguntou.numero - 1].resposta2 = content;
+                }
+            });
+            window.Candidatos[window.quemperguntou.numero - 1].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonPergunta2Candidato4.addEventListener("click", function () {
+        if (window.quemperguntou.pergunta1 == false) {
+            var candidatoPerguntado = JSON.stringify(labelcandidato4Pergunta.textContent);
+            var candidatoEscolhido = JSON.stringify(window.quemperguntou);
+            var listaCandidatos = JSON.stringify(Candidatos);
+
+            $.ajax({
+                url: "Home/pergunta2",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos, candidatoPerguntado: candidatoPerguntado },
+                success: function (content) {
+                    switch(window.quemperguntou.numero){
+                        case 1:
+                            labelcandidato1resposta1.textContent = content;
+                            perguntas1.style.display = 'none';
+                            break;
+                        case 2:
+                            labelcandidato2resposta1.textContent = content;
+                            perguntas2.style.display = 'none';
+
+                            break;
+                        case 3:
+                            labelcandidato3resposta1.textContent = content;
+                            perguntas3.style.display = 'none';
+
+                            break;
+                        case 4:
+                            labelcandidato4resposta1.textContent = content;
+                            perguntas4.style.display = 'none';
+
+                            break;
+                        case 5:
+                            labelcandidato5resposta1.textContent = content;
+                            perguntas5.style.display = 'none';
+
+                            break;
+                        case 6:
+                            labelcandidato6resposta1.textContent = content;
+                            perguntas6.style.display = 'none';
+
+                            break;
+                        default:
+                            labelcandidato7resposta1.textContent = content;
+                            perguntas7.style.display = 'none';
+
+                            break;
+                    }
+                    window.Candidatos[window.quemperguntou.numero - 1].resposta1 = content;
+                } 
+            });
+            window.Candidatos[window.quemperguntou.numero - 1].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.quemperguntou.pergunta2 == false && !window.escolha){
+            var candidatoPerguntado = JSON.stringify(labelcandidato4Pergunta.textContent);
+            var candidatoEscolhido = JSON.stringify(window.quemperguntou);
+            var listaCandidatos = JSON.stringify(Candidatos);
+
+            $.ajax({
+                url: "Home/pergunta2",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos, candidatoPerguntado: candidatoPerguntado },
+                success: function (content) {
+                    switch (window.quemperguntou.numero) {
+                        case 1:
+                            labelcandidato1resposta2.textContent = content;
+                            perguntas1.style.display = 'none';
+                            break;
+                        case 2:
+                            labelcandidato2resposta2.textContent = content;
+                            perguntas2.style.display = 'none';
+
+                            break;
+                        case 3:
+                            labelcandidato3resposta2.textContent = content;
+                            perguntas3.style.display = 'none';
+
+                            break;
+                        case 4:
+                            labelcandidato4resposta2.textContent = content;
+                            perguntas4.style.display = 'none';
+
+                            break;
+                        case 5:
+                            labelcandidato5resposta2.textContent = content;
+                            perguntas5.style.display = 'none';
+
+                            break;
+                        case 6:
+                            labelcandidato6resposta2.textContent = content;
+                            perguntas6.style.display = 'none';
+
+                            break;
+                        default:
+                            labelcandidato7resposta2.textContent = content;
+                            perguntas7.style.display = 'none';
+
+                            break;
+                    }
+                    window.Candidatos[window.quemperguntou.numero - 1].resposta2 = content;
+                }
+            });
+            window.Candidatos[window.quemperguntou.numero - 1].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonPergunta2Candidato5.addEventListener("click", function () {
+        if (window.quemperguntou.pergunta1 == false) {
+            var candidatoPerguntado = JSON.stringify(labelcandidato5Pergunta.textContent);
+            var candidatoEscolhido = JSON.stringify(window.quemperguntou);
+            var listaCandidatos = JSON.stringify(Candidatos);
+
+            $.ajax({
+                url: "Home/pergunta2",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos, candidatoPerguntado: candidatoPerguntado },
+                success: function (content) {
+                    switch(window.quemperguntou.numero){
+                        case 1:
+                            labelcandidato1resposta1.textContent = content;
+                            perguntas1.style.display = 'none';
+                            break;
+                        case 2:
+                            labelcandidato2resposta1.textContent = content;
+                            perguntas2.style.display = 'none';
+
+                            break;
+                        case 3:
+                            labelcandidato3resposta1.textContent = content;
+                            perguntas3.style.display = 'none';
+
+                            break;
+                        case 4:
+                            labelcandidato4resposta1.textContent = content;
+                            perguntas4.style.display = 'none';
+
+                            break;
+                        case 5:
+                            labelcandidato5resposta1.textContent = content;
+                            perguntas5.style.display = 'none';
+
+                            break;
+                        case 6:
+                            labelcandidato6resposta1.textContent = content;
+                            perguntas6.style.display = 'none';
+
+                            break;
+                        default:
+                            labelcandidato7resposta1.textContent = content;
+                            perguntas7.style.display = 'none';
+
+                            break;
+                    }
+                    window.Candidatos[window.quemperguntou.numero - 1].resposta1 = content;
+                } 
+            });
+            window.Candidatos[window.quemperguntou.numero - 1].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.quemperguntou.pergunta2 == false && !window.escolha){
+            var candidatoPerguntado = JSON.stringify(labelcandidato5Pergunta.textContent);
+            var candidatoEscolhido = JSON.stringify(window.quemperguntou);
+            var listaCandidatos = JSON.stringify(Candidatos);
+
+            $.ajax({
+                url: "Home/pergunta2",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos, candidatoPerguntado: candidatoPerguntado },
+                success: function (content) {
+                    switch (window.quemperguntou.numero) {
+                        case 1:
+                            labelcandidato1resposta2.textContent = content;
+                            perguntas1.style.display = 'none';
+                            break;
+                        case 2:
+                            labelcandidato2resposta2.textContent = content;
+                            perguntas2.style.display = 'none';
+
+                            break;
+                        case 3:
+                            labelcandidato3resposta2.textContent = content;
+                            perguntas3.style.display = 'none';
+
+                            break;
+                        case 4:
+                            labelcandidato4resposta2.textContent = content;
+                            perguntas4.style.display = 'none';
+
+                            break;
+                        case 5:
+                            labelcandidato5resposta2.textContent = content;
+                            perguntas5.style.display = 'none';
+
+                            break;
+                        case 6:
+                            labelcandidato6resposta2.textContent = content;
+                            perguntas6.style.display = 'none';
+
+                            break;
+                        default:
+                            labelcandidato7resposta2.textContent = content;
+                            perguntas7.style.display = 'none';
+
+                            break;
+                    }
+                    window.Candidatos[window.quemperguntou.numero - 1].resposta2 = content;
+                }
+            });
+            window.Candidatos[window.quemperguntou.numero - 1].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+
+    buttonPergunta2Candidato6.addEventListener("click", function () {
+        if (window.quemperguntou.pergunta1 == false) {
+            var candidatoPerguntado = JSON.stringify(labelcandidato6Pergunta.textContent);
+            var candidatoEscolhido = JSON.stringify(window.quemperguntou);
+            var listaCandidatos = JSON.stringify(Candidatos);
+
+            $.ajax({
+                url: "Home/pergunta2",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos, candidatoPerguntado: candidatoPerguntado },
+                success: function (content) {
+                    switch(window.quemperguntou.numero){
+                        case 1:
+                            labelcandidato1resposta1.textContent = content;
+                            perguntas1.style.display = 'none';
+                            break;
+                        case 2:
+                            labelcandidato2resposta1.textContent = content;
+                            perguntas2.style.display = 'none';
+
+                            break;
+                        case 3:
+                            labelcandidato3resposta1.textContent = content;
+                            perguntas3.style.display = 'none';
+
+                            break;
+                        case 4:
+                            labelcandidato4resposta1.textContent = content;
+                            perguntas4.style.display = 'none';
+
+                            break;
+                        case 5:
+                            labelcandidato5resposta1.textContent = content;
+                            perguntas5.style.display = 'none';
+
+                            break;
+                        case 6:
+                            labelcandidato6resposta1.textContent = content;
+                            perguntas6.style.display = 'none';
+
+                            break;
+                        default:
+                            labelcandidato7resposta1.textContent = content;
+                            perguntas7.style.display = 'none';
+
+                            break;
+                    }
+                    window.Candidatos[window.quemperguntou.numero - 1].resposta1 = content;
+                } 
+            });
+            window.Candidatos[window.quemperguntou.numero - 1].pergunta1 = true;
+
+            window.contador++;
+        }
+        else if(window.quemperguntou.pergunta2 == false && !window.escolha){
+            var candidatoPerguntado = JSON.stringify(labelcandidato6Pergunta.textContent);
+            var candidatoEscolhido = JSON.stringify(window.quemperguntou);
+            var listaCandidatos = JSON.stringify(Candidatos);
+
+            $.ajax({
+                url: "Home/pergunta2",
+                data: { candidatoEscolhido: candidatoEscolhido, listaCandidatos: listaCandidatos, candidatoPerguntado: candidatoPerguntado },
+                success: function (content) {
+                    switch (window.quemperguntou.numero) {
+                        case 1:
+                            labelcandidato1resposta2.textContent = content;
+                            perguntas1.style.display = 'none';
+                            break;
+                        case 2:
+                            labelcandidato2resposta2.textContent = content;
+                            perguntas2.style.display = 'none';
+
+                            break;
+                        case 3:
+                            labelcandidato3resposta2.textContent = content;
+                            perguntas3.style.display = 'none';
+
+                            break;
+                        case 4:
+                            labelcandidato4resposta2.textContent = content;
+                            perguntas4.style.display = 'none';
+
+                            break;
+                        case 5:
+                            labelcandidato5resposta2.textContent = content;
+                            perguntas5.style.display = 'none';
+
+                            break;
+                        case 6:
+                            labelcandidato6resposta2.textContent = content;
+                            perguntas6.style.display = 'none';
+
+                            break;
+                        default:
+                            labelcandidato7resposta2.textContent = content;
+                            perguntas7.style.display = 'none';
+
+                            break;
+                    }
+                    window.Candidatos[window.quemperguntou.numero - 1].resposta2 = content;
+                }
+            });
+            window.Candidatos[window.quemperguntou.numero - 1].pergunta2 = true;
+
+            window.escolha = true;
+            window.perguntaBonus = true;
+        }
+    });
+</script>
